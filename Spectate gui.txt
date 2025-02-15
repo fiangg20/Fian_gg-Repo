@@ -73,7 +73,7 @@ o6.Position = UDim2.new(0, 0, 0.5, -25)
 o6.Size = UDim2.new(0, 50, 0, 50)
 o6.BackgroundColor3 = Color3.new(1, 1, 1)
 o6.BackgroundTransparency = 0.3
-o6.Image = "http://www.roblox.com/asset/?id=176106970""
+o6.Image = "http://www.roblox.com/asset/?id=176106970"
 
 o7.Parent = o1
 table.insert(cors, coroutine.create(function()

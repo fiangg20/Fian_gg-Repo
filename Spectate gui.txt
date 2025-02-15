@@ -1,0 +1,151 @@
+local runDummyScript = function(f, scri)
+    local oldenv = getfenv(f)
+    local newenv = setmetatable({}, {
+        __index = function(_, k)
+            if k:lower() == 'script' then
+                return scri
+            else
+                return oldenv[k]
+            end
+        end
+    })
+    setfenv(f, newenv)
+    ypcall(function() f() end)
+end
+
+cors = {}
+mas = Instance.new("Model", game:GetService("Lighting"))
+mas.Name = "CompiledModel"
+
+local o1 = Instance.new("ScreenGui")
+local o2 = Instance.new("Frame")
+local o3 = Instance.new("TextButton")
+local o4 = Instance.new("TextButton")
+local o5 = Instance.new("TextLabel")
+local o6 = Instance.new("ImageButton")
+local o7 = Instance.new("LocalScript")
+
+o1.Name = "SpectateGui"
+o1.Parent = game:GetService("Players").LocalPlayer.PlayerGui
+
+o2.Name = "Bar"
+o2.Parent = o1
+o2.Position = UDim2.new(-1, -100, 0.87999999523163, -50)
+o2.Size = UDim2.new(0, 200, 0, 50)
+o2.BackgroundColor3 = Color3.new(0, 0, 0)
+o2.BackgroundTransparency = 0.2
+o2.BorderSizePixel = 5
+
+o3.Name = "Previous"
+o3.Parent = o2
+o3.Size = UDim2.new(0.80, 0, 1, 0)
+o3.Text = "<"
+o3.BackgroundColor3 = Color3.new(0.52549, 0.52549, 0.52549)
+o3.BorderColor3 = Color3.new(0.509804, 0.796079, 1)
+o3.Font = Enum.Font.SourceSans
+o3.TextColor3 = Color3.new(1, 1, 1)
+
+o4.Name = "Next"
+o4.Parent = o2
+o4.Position = UDim2.new(1, 0, 0, 0)
+o4.Size = UDim2.new(-0.80, 0, 1, 0)
+o4.Text = ">"
+o4.BackgroundColor3 = Color3.new(0.52549, 0.52549, 0.52549)
+o4.BorderColor3 = Color3.new(0.509804, 0.796079, 1)
+o4.Font = Enum.Font.SourceSans
+o4.TextColor3 = Color3.new(1, 1, 1)
+
+o5.Name = "Title"
+o5.Parent = o2
+o5.Position = UDim2.new(0.275, 0, 0, 0)
+o5.Size = UDim2.new(0.45, 0, 1, 0)
+o5.Text = "By Fian_gg"
+o5.BackgroundColor3 = Color3.new(1, 1, 1)
+o5.BackgroundTransparency = 1
+o5.Font = Enum.Font.SourceSans
+o5.TextColor3 = Color3.new(1, 1, 1)
+o5.TextSize = 30  -- Increased TextSize to make the names bigger
+o5.TextScaled = true
+
+o6.Name = "Button"
+o6.Parent = o1
+o6.Position = UDim2.new(0, 0, 0.5, -25)
+o6.Size = UDim2.new(0, 50, 0, 50)
+o6.BackgroundColor3 = Color3.new(1, 1, 1)
+o6.BackgroundTransparency = 0.3
+o6.Image = "http://www.roblox.com/asset/?id=12202864071"
+
+o7.Parent = o1
+table.insert(cors, coroutine.create(function()
+    wait()
+    runDummyScript(function()
+        local cam = game.Workspace.CurrentCamera
+        local bar = script.Parent.Bar
+        local title = bar.Title
+        local prev = bar.Previous
+        local nex = bar.Next
+        local button = script.Parent.Button
+
+        local players = game.Players:GetPlayers()
+        local currentIndex = 1  -- Start at the first player
+
+        -- Function to update the camera and title text
+        local function updateCameraAndTitle(index)
+            local player = players[index]
+            if player and player.Character then
+                cam.CameraSubject = player.Character.Humanoid
+                title.Text = string.format("%s (@%s)", player.DisplayName, player.Name)
+            end
+        end
+
+        -- Initialize the camera to the first player
+        updateCameraAndTitle(currentIndex)
+
+        -- Button to toggle between first-person and spectate mode
+        local debounce = false
+        button.MouseButton1Click:Connect(function()
+            if debounce == false then
+                debounce = true
+                bar:TweenPosition(UDim2.new(.5, -100, 0.88, -50), "In", "Linear", 0.2, true)
+                pcall(function()
+                    local player = game.Players:GetPlayerFromCharacter(cam.CameraSubject.Parent)
+                    title.Text = string.format("%s (@%s)", player.DisplayName, player.Name)
+                end)
+            elseif debounce == true then
+                debounce = false
+                pcall(function() cam.CameraSubject = game.Players.LocalPlayer.Character.Humanoid end)
+                bar:TweenPosition(UDim2.new(-1, -100, 0.88, -50), "In", "Linear", 0.2, true)
+            end
+        end)
+
+        -- Previous button click
+        prev.MouseButton1Click:Connect(function()
+            currentIndex = currentIndex - 1
+            if currentIndex < 1 then
+                currentIndex = #players  -- Wrap to last player if going before the first player
+            end
+            updateCameraAndTitle(currentIndex)
+        end)
+
+        -- Next button click
+        nex.MouseButton1Click:Connect(function()
+            currentIndex = currentIndex + 1
+            if currentIndex > #players then
+                currentIndex = 1  -- Wrap to first player if going past the last player
+            end
+            updateCameraAndTitle(currentIndex)
+        end)
+    end, o7)
+end))
+
+mas.Parent = game:GetService("Players").LocalPlayer.PlayerGui
+mas:MakeJoints()
+local mas1 = mas:GetChildren()
+for i = 1, #mas1 do
+    mas1[i].Parent = game:GetService("Players").LocalPlayer.PlayerGui
+    ypcall(function() mas1[i]:MakeJoints() end)
+end
+mas:Destroy()
+for i = 1, #cors do
+    coroutine.resume(cors[i])
+end

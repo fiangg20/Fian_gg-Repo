@@ -38,7 +38,7 @@ o2.BorderSizePixel = 5
 
 o3.Name = "Previous"
 o3.Parent = o2
-o3.Size = UDim2.new(0.80, 0, 1, 0)
+o3.Size = UDim2.new(0.25, 0, 1, 0)
 o3.Text = "<"
 o3.BackgroundColor3 = Color3.new(0.52549, 0.52549, 0.52549)
 o3.BorderColor3 = Color3.new(0.509804, 0.796079, 1)
@@ -48,7 +48,7 @@ o3.TextColor3 = Color3.new(1, 1, 1)
 o4.Name = "Next"
 o4.Parent = o2
 o4.Position = UDim2.new(1, 0, 0, 0)
-o4.Size = UDim2.new(-0.80, 0, 1, 0)
+o4.Size = UDim2.new(-0.25, 0, 1, 0)
 o4.Text = ">"
 o4.BackgroundColor3 = Color3.new(0.52549, 0.52549, 0.52549)
 o4.BorderColor3 = Color3.new(0.509804, 0.796079, 1)
@@ -59,7 +59,7 @@ o5.Name = "Title"
 o5.Parent = o2
 o5.Position = UDim2.new(0.275, 0, 0, 0)
 o5.Size = UDim2.new(0.45, 0, 1, 0)
-o5.Text = "By Fian_gg"
+o5.Text = ""
 o5.BackgroundColor3 = Color3.new(1, 1, 1)
 o5.BackgroundTransparency = 1
 o5.Font = Enum.Font.SourceSans
@@ -73,7 +73,7 @@ o6.Position = UDim2.new(0, 0, 0.5, -25)
 o6.Size = UDim2.new(0, 50, 0, 50)
 o6.BackgroundColor3 = Color3.new(1, 1, 1)
 o6.BackgroundTransparency = 0.3
-o6.Image = "http://www.roblox.com/asset/?id=12202864071"
+o6.Image = "http://www.roblox.com/asset/?id=176106970""
 
 o7.Parent = o1
 table.insert(cors, coroutine.create(function()

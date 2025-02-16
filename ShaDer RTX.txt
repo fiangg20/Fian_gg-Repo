@@ -53,12 +53,10 @@ s.Enabled = true
 s.Intensity = 0.01
 s.Spread = 0.146
 
-local icon = Instance.new("Image")
-icon.Image = "rbxassetid://11126717980"
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "ShaDer (RTX)",
+Text = "Made By Fian_gg", 
 
-StarterGui:SetCore("SendNotification", {
-    Title = "ShaDer (RTX)";
-    Text = "Made By Fian_gg";
-    Icon = icon;
-    Duration = 5;
+Button1 = "Ok",
+Duration = 30 
 })

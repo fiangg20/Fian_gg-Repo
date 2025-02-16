@@ -1,9 +1,10 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/Revenant", true))()
-Library.DefaultColor = Color3.fromRGB(23,255,255)
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
 
-Library:Notification({
-	Text = "ShaDer (RTX) By Fian_gg",
-	Duration = 10
+Rayfield:Notify({
+   Title = "Shader (RTX) Loaded!",
+   Content = "Made By Fian_gg",
+   Duration = 6.5,
+   Image = 4483362458,
 })
 local a = game.Lighting
 a.Ambient = Color3.fromRGB(33, 33, 33)

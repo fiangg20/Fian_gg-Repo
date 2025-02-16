@@ -1,9 +1,9 @@
-game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "ShaDer (RTX)",
-Text = "Made By Fian_gg", 
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/Revenant", true))()
+Library.DefaultColor = Color3.fromRGB(23,255,255)
 
-Button1 = "Ok",
-Duration = 30 
+Library:Notification({
+	Text = "ShaDer (RTX) By Fian_gg",
+	Duration = 10
 })
 local a = game.Lighting
 a.Ambient = Color3.fromRGB(33, 33, 33)

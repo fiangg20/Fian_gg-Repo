@@ -1,10 +1,13 @@
-local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/refs/heads/master/Example.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/Revenant", true))()
+Library.DefaultColor = Color3.fromRGB(255,0,0)
 
-Fluent:Notify({
-    Title = "ShaDer RTX",
-    Content = "ShaDer RTX Made By Fian_gg",
-    Duration = 10
+Library:Notification({
+	Text = "Loading ShaDer RTX By Fian_gg",
+	Duration = 10
 })
+
+wait (10)
+
 local a = game.Lighting
 a.Ambient = Color3.fromRGB(33, 33, 33)
 a.Brightness = 5.69
@@ -59,3 +62,13 @@ local s = Instance.new("SunRaysEffect", a)
 s.Enabled = true
 s.Intensity = 0.01
 s.Spread = 0.146
+
+wait (1)
+
+local Library =  loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/Revenant", true))()
+Library.DefaultColor = Color3.fromRGB(23,255,255)
+
+Library:Notification({
+	Text = "ShaDer RTX Loaded!",
+	Duration = 69
+})

@@ -1,45 +1,10 @@
-local player = game.Players.LocalPlayer
-local screenGui = Instance.new("ScreenGui")
-local notificationFrame = Instance.new("Frame")
-local notificationLabel = Instance.new("TextLabel")
-local closeButton = Instance.new("TextButton")
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/blob/master/Example.lua"))()
 
-screenGui.Name = "NotificationGui"
-screenGui.Parent = player:WaitForChild("PlayerGui")
-
-notificationFrame.Size = UDim2.new(0.3, 0, 0.1, 0)
-notificationFrame.Position = UDim2.new(0.35, 0, 0.1, 0)
-notificationFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-notificationFrame.BorderSizePixel = 0
-notificationFrame.Visible = false 
-notificationFrame.Parent = screenGui
-
-notificationLabel.Size = UDim2.new(1, 0, 0.8, 0)
-notificationLabel.Position = UDim2.new(0, 0, 0, 0)
-notificationLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-notificationLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-notificationLabel.TextScaled = true
-notificationLabel.Parent = notificationFrame
-
-closeButton.Size = UDim2.new(0.3, 0, 0.2, 0)
-closeButton.Position = UDim2.new(0.35, 0, 0.8, 0)
-closeButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-closeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-closeButton.Text = "Close"
-closeButton.Parent = notificationFrame
-
-local function closeNotification()
-    notificationFrame.Visible = false
-end
-
-closeButton.MouseButton1Click:Connect(closeNotification)
-
-local function showNotification(title, message)
-    notificationLabel.Text = title .. "\n" .. message
-    notificationFrame.Visible = true
-end
-
-showNotification("ShaDer RTX", "Thankyou for using ShaDer RTX By Fian_gg!")
+Fluent:Notify({
+    Title = "ShaDer RTX",
+    Content = "ShaDer RTX Made By Fian_gg",
+    Duration = 10
+})
 local a = game.Lighting
 a.Ambient = Color3.fromRGB(33, 33, 33)
 a.Brightness = 5.69

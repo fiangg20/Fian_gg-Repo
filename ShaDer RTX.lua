@@ -8,6 +8,13 @@ Library:Notification({
 
 wait (10)
 
+local Library =  loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/Revenant", true))()
+Library.DefaultColor = Color3.fromRGB(23,255,255)
+
+Library:Notification({
+	Text = "ShaDer RTX Loaded!",
+	Duration = 8
+})
 local a = game.Lighting
 a.Ambient = Color3.fromRGB(33, 33, 33)
 a.Brightness = 5.69
@@ -63,12 +70,3 @@ s.Enabled = true
 s.Intensity = 0.01
 s.Spread = 0.146
 
-wait (1)
-
-local Library =  loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/Revenant", true))()
-Library.DefaultColor = Color3.fromRGB(23,255,255)
-
-Library:Notification({
-	Text = "ShaDer RTX Loaded!",
-	Duration = 69
-})

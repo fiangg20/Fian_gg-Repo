@@ -2,7 +2,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/blood
 Library.DefaultColor = Color3.fromRGB(255,0,0)
 
 Library:Notification({
-	Text = "Loading ShaDer RTX By Fian_gg",
+	Text = "Loading...",
 	Duration = 10
 })
 
@@ -14,6 +14,21 @@ Library.DefaultColor = Color3.fromRGB(23,255,255)
 Library:Notification({
 	Text = "ShaDer RTX Loaded!",
 	Duration = 8
+})
+local Library =  loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/Revenant", true))()
+Library.DefaultColor = Color3.fromRGB(23,255,255)
+
+Library:Notification({
+	Text = "By Fian_gg",
+	Duration = 8
+})
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "fian_gaming953",
+Text = "Script Maker From Indonesia 🇮🇩", 
+Icon = "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-1691BDBE0D649EF28EBEE7C409897224-Png/150/150/AvatarHeadshot/Webp/noFilter", 
+
+Button1 = "Ok",
+Duration = 30 
 })
 local a = game.Lighting
 a.Ambient = Color3.fromRGB(33, 33, 33)

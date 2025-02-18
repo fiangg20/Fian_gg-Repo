@@ -25,7 +25,7 @@ Library:Notification({
 game:GetService("StarterGui"):SetCore("SendNotification",{
 Title = "fian_gaming953",
 Text = "Script Maker From Indonesia 🇮🇩", 
-Icon = "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-1691BDBE0D649EF28EBEE7C409897224-Png/150/150/AvatarHeadshot/Webp/noFilter", 
+Icon = "rbxassetid://110232549367382", 
 
 Button1 = "Ok",
 Duration = 30 

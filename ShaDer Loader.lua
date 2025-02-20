@@ -1,4 +1,5 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
 local Window = Rayfield:CreateWindow({
    Name = "ShaDer Loader",
    Icon = 110232549367382, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
@@ -46,6 +47,7 @@ local Button = Tab:CreateButton({
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fiangg20/Fian_gg-Repo/refs/heads/main/ShaDer.lua"))()
    end,
 })
+
 local Button = Tab:CreateButton({
    Name = "Load MoBlur (Motion Blur)",
    Callback = function()
@@ -58,6 +60,7 @@ local Button = Tab:CreateButton({
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fiangg20/Fian_gg-Repo/refs/heads/main/MoBlur.lua"))()
    end, 
 })
+
 local Tab = Window:CreateTab("About") -- Title
 
 local Button = Tab:CreateButton({
@@ -66,4 +69,5 @@ local Button = Tab:CreateButton({
    Rayfield:Destroy()
    end,
 })
+
 local Paragraph = Tab:CreateParagraph({Title = "by Fian_gg", Content = "Script Maker From Indonesia 🇮🇩"})

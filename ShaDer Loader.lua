@@ -1,7 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    Name = "ShaDer Loader",
-   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   Icon = 110232549367382, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "ShaDer Loader",
    LoadingSubtitle = "by Fian_gg",
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
@@ -37,12 +37,24 @@ local Tab = Window:CreateTab("Load", 4483362458) -- Title, Image
 local Button = Tab:CreateButton({
    Name = "Load ShaDer",
    Callback = function()
+         Rayfield:Notify({
+   Title = "Loading ShaDer...",
+   Content = "It takes time to run this script",
+   Duration = 6.5,
+   Image = 4483362458,
+})
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fiangg20/Fian_gg-Repo/refs/heads/main/ShaDer.lua"))()
    end,
 })
 local Button = Tab:CreateButton({
    Name = "Load MoBlur (Motion Blur)",
    Callback = function()
+         Rayfield:Notify({
+   Title = "Loading MoBlur...",
+   Content = "It takes time to run this script",
+   Duration = 6.5,
+   Image = 4483362458,
+})
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fiangg20/Fian_gg-Repo/refs/heads/main/MoBlur.lua"))()
    end, 
 })

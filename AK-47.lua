@@ -1,4 +1,22 @@
--- made by ChiefBlox
+-- Made By Fian_gg
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/Revenant", true))()
+Library.DefaultColor = Color3.fromRGB(255,0,0)
+
+Library:Notification({
+	Text = "Loading...",
+	Duration = 5
+})
+
+wait (10)
+
+local Library =  loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/Revenant", true))()
+Library.DefaultColor = Color3.fromRGB(23,255,255)
+
+Library:Notification({
+	Text = "AK-47 Tools Loaded!",
+	Duration = 8
+})
+
 function sandbox(var,func)
 	local env = getfenv(func)
 	local newenv = setmetatable({},{

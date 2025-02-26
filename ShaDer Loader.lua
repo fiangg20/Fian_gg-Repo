@@ -45,6 +45,9 @@ local Button = Tab:CreateButton({
    Image = 4483362458,
 })
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fiangg20/Fian_gg-Repo/refs/heads/main/ShaDer.lua"))()
+   local Sound = Instance.new("Sound",game:GetService("SoundService"))
+   Sound.SoundId = "rbxassetid://18595195017"
+   Sound:Play()
    end,
 })
 
@@ -58,6 +61,9 @@ local Button = Tab:CreateButton({
    Image = 4483362458,
 })
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fiangg20/Fian_gg-Repo/refs/heads/main/MoBlur.lua"))()
+   local Sound = Instance.new("Sound",game:GetService("SoundService"))
+   Sound.SoundId = "rbxassetid://18595195017"
+   Sound:Play()
    end, 
 })
 

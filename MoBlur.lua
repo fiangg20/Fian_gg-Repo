@@ -8,6 +8,10 @@ Library:Notification({
 
 wait (10)
 
+local Sound = Instance.new("Sound",game:GetService("SoundService"))
+Sound.SoundId = "rbxassetid://18595195017"
+Sound:Play()
+
 local Library =  loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/Revenant", true))()
 Library.DefaultColor = Color3.fromRGB(23,255,255)
 

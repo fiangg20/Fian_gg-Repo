@@ -22,14 +22,10 @@ Library:Notification({
 	Text = "By Fian_gg",
 	Duration = 8
 })
-game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "fian_gaming953",
-Text = "Script Maker From Indonesia 🇮🇩", 
-Icon = "rbxassetid://110232549367382", 
+local Sound = Instance.new("Sound",game:GetService("SoundService"))
+Sound.SoundId = "rbxassetid://18595195017"
+Sound:Play()
 
-Button1 = "Ok",
-Duration = 30 
-})
 local a = game.Lighting
 a.Ambient = Color3.fromRGB(33, 33, 33)
 a.Brightness = 5.69

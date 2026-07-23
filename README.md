@@ -1,8 +1,11 @@
-      HELLO👋
+## 📈 My GitHub Stats
 
-      My Name Is Fian
-      I'm is a modder From Indonesia 🇮🇩
-      Do you want to mod some app?
-Contact : fiangaming005@gmail.com
-TikTok : @fian_gg.20
-YouTube : @fian_gg.modder
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=fiangg20&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" />
+</div>
+
+<br />
+
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=fiangg20&color=blueviolet&style=for-the-badge" alt="Profile Views" />
+</div>
